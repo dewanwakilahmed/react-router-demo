@@ -5,7 +5,6 @@ const Users = () => {
   const showActiveUsers = searchParams.get("filter") === "active";
   return (
     <>
-      <Outlet />
       <div>
         <button onClick={() => setSearchParams({ filter: "active" })}>
           Active Users
@@ -23,6 +22,7 @@ const Users = () => {
         <Link to="3">User 3</Link>
         <Link to="admin">Admin</Link>
       </nav>
+      <Outlet />
     </>
   );
 };
